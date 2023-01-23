@@ -1,0 +1,14 @@
+import prime.*;
+import java.io.*;
+import java.lang.Math;
+class pr{
+	public static void main(String args[]){
+		try{
+			pr2 p=new pr2();
+			DataInputStream br=new DataInputStream(System.in);
+			System.out.println("enter a number:");
+			int n=Integer.parseInt(br.readLine());
+			p.fact(n);
+		}catch(Exception e){}
+	}
+}
