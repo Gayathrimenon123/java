@@ -1,0 +1,27 @@
+package networking;
+import java.net.*;
+import java.io.*;
+public class SockCli {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try
+		{
+		Socket s=new Socket("localhost",1234);
+		System.out.println("Sending a request to server");
+		DataOutputStream dout=new DataOutputStream(s.getOutputStream());
+		DataInputStream br=new DataInputStream(System.in);
+		System.out.println("Enter data u want to send");
+		String st=br.readLine();
+		dout.writeUTF(st);
+		s.close();
+		}
+		catch(Exception e)
+		{
+		System.out.println(e);
+		}
+ 
+	}
+
+}
+//s12 q2
